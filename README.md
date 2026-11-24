@@ -24,13 +24,16 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Build and lint
+## Build and verification
 
 ```bash
 pnpm lint
+pnpm test:checker
 pnpm build
 pnpm start
 ```
+
+The checker smoke suite covers 40 safe and suspicious inputs. The rule engine checks URL structure, private/numeric hosts, dangerous schemes, brand lookalikes, shorteners, risky downloads, redirects, encoding, multiple domains, and manipulation wording. It remains heuristic and does not visit the destination or query a threat-intelligence service.
 
 ## Project structure
 
@@ -57,6 +60,8 @@ lib/
   site.ts                      Site URL, metadata, and survey URL
 public/
   favicon.svg, manifest.json, fonts/
+scripts/
+  checklink-smoke.ts            Checker smoke tests
 ```
 
 ## Notes

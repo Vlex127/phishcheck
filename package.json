@@ -2,11 +2,15 @@
   "name": "phishcheck",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.6.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:checker": "node --no-warnings --experimental-strip-types scripts/checklink-smoke.ts"
   },
   "dependencies": {
     "next": "^15.0.0",

@@ -25,12 +25,22 @@ const examples = [
     label: "The real LASU website",
     value: "https://www.lasu.edu.ng",
   },
+  {
+    label: "Risky app download",
+    value:
+      "Your parcel is waiting. Install the tracking app: https://dhl-track-support.top/update.apk",
+  },
+  {
+    label: "Redirect to another domain",
+    value:
+      "https://portal.example.com/login?redirect=https%3A%2F%2Faccount-check.top%2Fverify",
+  },
 ];
 
 const resultHeadings = {
   low: "No strong warning signs found",
   medium: "Some warning signs found",
-  high: "Several warning signs found",
+  high: "Strong warning signs found",
 };
 
 const riskBars: Record<CheckResult["level"], string> = {
@@ -163,7 +173,7 @@ export function LinkChecker() {
               Try a sample
             </h2>
             <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">
-              3 records
+              {examples.length} records
             </p>
           </div>
           <p className="mt-1 text-xs leading-5 text-muted">
