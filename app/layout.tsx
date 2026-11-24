@@ -6,7 +6,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL("https://phishcheck-tau.vercel.app"),
   title: {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
   openGraph: {
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/opengraph-image",
+        url: `${SITE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "PhishCheck — phishing awareness quiz and link checker",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME} — phishing awareness for LASU students`,
     description: SITE_DESCRIPTION,
-    images: ["/opengraph-image"],
+    images: [`${SITE_URL}/opengraph-image`],
   },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],

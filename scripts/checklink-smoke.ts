@@ -40,6 +40,13 @@ const cases = [
     reason: "shortened link",
   },
   {
+    name: "prize message with shortened link",
+    input:
+      "Congratulations! You have won ₦500,000. Claim now: bit.ly/fgn-scholar26",
+    level: "high",
+    reason: "Prize, payment or reward lure",
+  },
+  {
     name: "private numeric address",
     input: "http://192.168.44.12/nin-update",
     level: "high",
