@@ -71,7 +71,7 @@ export default function AboutPage() {
             What PhishCheck Is
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
-            A small web application built for a LASU CSC 333 research project.
+            A small web application built for a LASU CSC 333 course project.
             It offers a ten-scenario phishing quiz and a rule-based suspicious
             link checker. It does not require an account and does not send the
             things you type anywhere.
