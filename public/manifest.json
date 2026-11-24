@@ -1,0 +1,17 @@
+{
+  "name": "PhishCheck",
+  "short_name": "PhishCheck",
+  "description": "A phishing-awareness quiz and suspicious link checker built for a LASU CSC 333 research study.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe5",
+  "theme_color": "#f3efe5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# PhishCheck
+
+A small phishing-awareness web app built for a CSC 333 research study by Group 31, Lagos State University (LASU). It has two browser-only tools:
+
+- **Phishing quiz** — 10 realistic messages, one question at a time, with instant feedback and an answer review.
+- **Link checker** — paste a link or message to get a low, medium, or high risk rating based on simple rules.
+
+No login, database, analytics, API calls, or data collection. Nothing typed into the app leaves the browser.
+
+## Stack
+
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 3
+- pnpm
+
+## Run locally
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Build and lint
+
+```bash
+pnpm lint
+pnpm build
+pnpm start
+```
+
+## Project structure
+
+```text
+app/
+  page.tsx                 Home
+  about/page.tsx           About page (project credits and student numbers)
+  quiz/page.tsx            Quiz route
+  checker/page.tsx         Link checker route
+  layout.tsx               Shared metadata, header, footer, JSON-LD
+components/
+  QuizExperience.tsx       Quiz state and review flow
+  LinkChecker.tsx          Link checker form and results
+  SiteHeader.tsx           Shared navigation
+  RiskBadge.tsx            Accessible risk badge
+lib/
+  quiz.ts                  Quiz data and scoring (existing logic)
+  checklink.ts             Rule-based link analysis (existing logic)
+```
+
+## Notes
+
+- The link checker is a simple rule-based awareness aid, not a security scanner. **Low risk does not mean safe**, and the app cannot guarantee that a link is legitimate.
+- Dark mode follows the operating system setting via `prefers-color-scheme`.
+- Replace the placeholder `https://phishcheck.com` site URL in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` before deploying to a real domain.
