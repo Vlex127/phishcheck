@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const credits = [
-  { name: "Akapo Fisayomi Beatrice", matric: "240591031" },
-  { name: "Olufowobi Umar Adedoyin", matric: "240591164" },
-  { name: "Adebayo Victor", matric: "240591221" },
-  { name: "Iwuno ChukwuEbuka Vincent", matric: "240591107" },
-  { name: "Ogbonna Peter Izuchukwu", matric: "240591142" },
-  { name: "Zinsu sezonsu Emmanuel", matric: "240591300" },
+const members = [
+  "Akapo Fisayomi Beatrice",
+  "Iwuno ChukwuEbuka Vincent",
+  "Ogbonna Peter Izuchukwu",
+  "Olufowobi Umar Adedoyin",
+  "Adebayo Victor",
+  "Zinsu sezonsu Emmanuel",
 ] as const;
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function AboutPage() {
             id="credits-heading"
             className="font-display text-2xl font-extrabold tracking-[-0.04em]"
           >
-            Project Credits and Student Numbers
+            Group Members
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
             PhishCheck is a CSC 333 Group 31 project at LASU. The browser tools
@@ -48,13 +48,12 @@ export default function AboutPage() {
             for practical phishing-awareness practice.
           </p>
           <ul className="mt-6 space-y-2">
-            {credits.map((credit) => (
+            {members.map((name) => (
               <li
-                key={credit.name}
+                key={name}
                 className="font-mono text-[11px] tracking-[0.05em] text-ink"
               >
-                <span className="font-semibold uppercase">{credit.name}</span>{" "}
-                — Matric: {credit.matric}
+                <span className="font-semibold uppercase">{name}</span>
               </li>
             ))}
           </ul>
