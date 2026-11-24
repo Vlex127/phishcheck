@@ -27,7 +27,7 @@ const habits = [
 ];
 
 export const metadata: Metadata = {
-  title: "Phishing awareness quiz and link checker",
+  title: "PhishCheck — phishing awareness for LASU students",
   description:
     "Practise spotting phishing messages with a 10-question quiz and check suspicious links for common warning signs. Built by LASU CSC 333 Group 31.",
   alternates: {

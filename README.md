@@ -36,23 +36,30 @@ pnpm start
 
 ```text
 app/
-  page.tsx                 Home
-  about/page.tsx           About page (project credits and student numbers)
-  quiz/page.tsx            Quiz route
-  checker/page.tsx         Link checker route
-  layout.tsx               Shared metadata, header, footer, JSON-LD
+  page.tsx                     Home
+  about/page.tsx               About page (project credits and student numbers)
+  quiz/page.tsx, layout.tsx    Quiz route and metadata
+  checker/page.tsx, layout.tsx Link checker route and metadata
+  layout.tsx                   Root layout, site metadata, JSON-LD
+  not-found.tsx, error.tsx, global-error.tsx
+  robots.ts, sitemap.ts, opengraph-image.tsx
+  globals.css                  Global styles
 components/
-  QuizExperience.tsx       Quiz state and review flow
-  LinkChecker.tsx          Link checker form and results
-  SiteHeader.tsx           Shared navigation
-  RiskBadge.tsx            Accessible risk badge
+  JsonLd.tsx                   JSON-LD helper
+  QuizExperience.tsx           Quiz state and review flow
+  LinkChecker.tsx              Link checker form and results
+  SiteHeader.tsx, SiteFooter.tsx
+  RiskBadge.tsx                Accessible risk badge
+  icons.tsx
 lib/
-  quiz.ts                  Quiz data and scoring (existing logic)
-  checklink.ts             Rule-based link analysis (existing logic)
+  quiz.ts                      Quiz data and scoring
+  checklink.ts                 Rule-based link analysis
+public/
+  favicon.svg, manifest.json, fonts/
 ```
 
 ## Notes
 
 - The link checker is a simple rule-based awareness aid, not a security scanner. **Low risk does not mean safe**, and the app cannot guarantee that a link is legitimate.
 - Dark mode follows the operating system setting via `prefers-color-scheme`.
-- Replace the placeholder `https://phishcheck.com` site URL in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` before deploying to a real domain.
+- Replace the placeholder `https://phishcheck.com` site URL in `app/layout.tsx`, `app/page.tsx`, `app/sitemap.ts`, and `app/robots.ts` before deploying to a real domain.

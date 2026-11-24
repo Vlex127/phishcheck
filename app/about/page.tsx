@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 const credits = [
   { name: "Akapo Fisayomi Beatrice", matric: "240591031" },
@@ -83,7 +84,7 @@ export default function AboutPage() {
         >
           <h2
             id="research-heading"
-            className="font-display text-2xl font-extrobold tracking-[-0.04em]"
+            className="font-display text-2xl font-extrbold tracking-[-0.04em]"
           >
             Research Context and Privacy
           </h2>
@@ -92,6 +93,17 @@ export default function AboutPage() {
             awareness among LASU students. Everything runs in the browser, with
             no login and no data collection.
           </p>
+        </section>
+
+        <section aria-labelledby="links-heading" className="py-8 sm:py-10">
+          <h2 id="links-heading" className="font-display text-2xl font-extrbold tracking-[-0.04em]">
+            Quick Links
+          </h2>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/" className="rounded-sm border border-line px-3 py-2 text-sm font-semibold text-ink hover:border-ink">Home</Link>
+            <Link href="/quiz" className="rounded-sm border border-line px-3 py-2 text-sm font-semibold text-ink hover:border-ink">Quiz</Link>
+            <Link href="/checker" className="rounded-sm border border-line px-3 py-2 text-sm font-semibold text-ink hover:border-ink">Link Checker</Link>
+          </div>
         </section>
       </div>
     </main>
