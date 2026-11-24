@@ -2,12 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-const SITE_URL = "https://phishcheck.com";
-const SITE_NAME = "PhishCheck";
-const SITE_DESCRIPTION =
-  "Test your eye for phishing messages and check suspicious links with PhishCheck, a free awareness tool built for a LASU CSC 333 research study.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -1,6 +1,6 @@
 # PhishCheck
 
-A small phishing-awareness web app built for a CSC 333 research study by Group 31, Lagos State University (LASU). It has two browser-only tools:
+A small phishing-awareness web app built for a CSC 333 Research Methodology course project by Section B, Group 31, Lagos State University (LASU). It has two browser-only tools:
 
 - **Phishing quiz** — 10 realistic messages, one question at a time, with instant feedback and an answer review.
 - **Link checker** — paste a link or message to get a low, medium, or high risk rating based on simple rules.
@@ -54,6 +54,7 @@ components/
 lib/
   quiz.ts                      Quiz data and scoring
   checklink.ts                 Rule-based link analysis
+  site.ts                      Site URL, metadata, and survey URL
 public/
   favicon.svg, manifest.json, fonts/
 ```
@@ -62,4 +63,4 @@ public/
 
 - The link checker is a simple rule-based awareness aid, not a security scanner. **Low risk does not mean safe**, and the app cannot guarantee that a link is legitimate.
 - Dark mode follows the operating system setting via `prefers-color-scheme`.
-- Replace the placeholder `https://phishcheck.com` site URL in `app/layout.tsx`, `app/page.tsx`, `app/sitemap.ts`, and `app/robots.ts` before deploying to a real domain.
+- The production URL and Google Forms survey URL are centralised in `lib/site.ts`.

@@ -8,8 +8,7 @@ import {
   LinkIcon,
   QuizIcon,
 } from "@/components/icons";
-
-const SITE_URL = "https://phishcheck.com";
+import { SITE_URL, SURVEY_URL } from "@/lib/site";
 
 const habits = [
   {
@@ -87,6 +86,24 @@ export default function HomePage() {
                 instincts against ten realistic scenarios from Nigeria. No login,
                 no scoreboard, no data collected.
               </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={SURVEY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-ink px-4 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-accent"
+                >
+                  Take the research survey
+                  <ArrowRightIcon className="size-4" />
+                </a>
+                <Link
+                  href="/about"
+                  className="inline-flex min-h-11 items-center rounded-sm border border-line px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
+                >
+                  About the study
+                </Link>
+              </div>
 
               <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
                 <span className="flex items-center gap-2">
